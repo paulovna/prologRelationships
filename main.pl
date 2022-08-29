@@ -56,8 +56,6 @@ tia(X,Y) :- progenitor(Z,Y), irma(X,Z).
 primo(X,Y) :- homem(X), progenitor(Z,X), irmao_geral(A,Z), progenitor(A,Y).
 prima(X,Y) :- mulher(X), progenitor(Z,X), irmao_geral(A,Z), progenitor(A,Y).
 
-%Segundo o dicionário, descendente é aquele que descende de alguém, como um filho, neto ou bisneto
-%Sendo assim, entendo que descendente(X,Y) quer dizer que Y é pai, avo, bisavo etc. de X
 descendente(X,Y) :- progenitor(Y,X).
 descendente(X,Y) :- progenitor(Y,Z), descendente(X,Z).
 
